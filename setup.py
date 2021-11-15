@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.0.80'
+VERSION = '0.1.0'
 DESCRIPTION = 'Gene parser for Axie Infinity'
 
 with open("README.md", "r", encoding="utf-8") as fh:
@@ -15,13 +15,16 @@ setup(
     description=DESCRIPTION,
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
+    url="https://github.com/Stiggu/agp-py",
+    project_urls={
+        "Bug Tracker": "https://github.com/Stiggu/agp-py/issues",
+    },
     packages=find_packages(),
     install_requires=[],
     keywords=['python', 'axie infinity'],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Programming Language :: Python :: 3",
-        "Operating System :: MacOS :: MacOS X",
-        "Operating System :: Microsoft :: Windows",
-    ]
+        "Operating System :: OS Independent",
+    ],
 )
