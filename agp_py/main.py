@@ -159,6 +159,11 @@ class AxieGene:
         :param bin_part: dict
         :return: dict
         """
-        part = traits[axie_class.value][part_type.value][bin_part][region.value]
+        try:
+            part = traits[axie_class.value][part_type.value][bin_part][region.value]
+        # In case the axie part for a given region isn't found just default to 'global'
+        # Hopefully this is the only instance of KeyError, if not i'll fix this again
+        except KeyError:
+            part = traits[axie_class.value][part_type.value][bin_part][AxieRegion.Global.value]
 
         return parts["{}-{}".format(part_type.value, part.lower().replace(' ', '-').replace("'", ''))]

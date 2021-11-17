@@ -46,7 +46,7 @@ ColorMap = {
         '0100': 'f0c66e',
         '0110': '60afce',
         '0000': 'ffffff'
-                      },
+    },
 
     AxieClass.BUG: {
         '0010': 'ff7183',
