@@ -16,8 +16,7 @@ class AxieGene:
         self.bin_dict: dict = self.format_binary_data(self.bin_hex)
         self.genes: dict = self.axie_gene_from_binary(self.bin_dict)
 
-    @staticmethod
-    def hex_to_binary(hex_string: str) -> str:
+    def hex_to_binary(self, hex_string: str) -> str:
         """
         Turns the Hex to Binary
         :param hex_string: str
@@ -25,7 +24,7 @@ class AxieGene:
         """
         hex_string = hex_string[2:]
         try:
-            decoded_hex = "{0:04b}".format(int(hex_string, 16)).zfill(256)
+            decoded_hex = "{0:04b}".format(int(hex_string, 16)).zfill(self.hex_size)
         except ValueError:
             raise ValueError("Cannot turn this string into binary")
 
