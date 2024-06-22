@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.1.2'
+VERSION = '0.1.3'
 DESCRIPTION = 'Gene parser for Axie Infinity'
 
 with open("README.md", "r", encoding="utf-8") as fh:
@@ -10,7 +10,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name="agp-py",
     version=VERSION,
-    author="Abel Mundarain",
+    author="Stiggu",
     author_email="stiggu@protonmail.com",
     description=DESCRIPTION,
     long_description=LONG_DESCRIPTION,
